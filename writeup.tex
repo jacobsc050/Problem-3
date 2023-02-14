@@ -1,5 +1,4 @@
 % This is a simple sample document.  For more complicated documents take a look in the exercise tab. Note that everything that comes after a % symbol is treated as comment and ignored when the code is compiled.
-
 \documentclass{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
 
 \usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
@@ -13,17 +12,22 @@
 \maketitle % creates title using information in preamble (title, author, date)
 
 \section{Overview} % creates a section
+%notice how the command will end at the first non-alphabet charecter such as the . after \LaTeX
+The goal of this project is to numerically simulate the classical and quantum mechanical 
+case of the CHSH correlator, and analyze the physical significance of each result. 
+We do this by examining two different scenarios denoted as Problem 3.1 and Problem 3.2 in the 
+following sections. The solution to both of these problems 
+point to the same conclusion: quantum mechanics contains no hidden local variables that can account
+for the measurment correlation between two entangled particles measured at a distance, 
+in different lab setups. Consequently, we are forced to conclude that quantum mechanics is a 
+fundementally non-local theory.
 
-\textbf{Hello World!} Today I am learning \LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \LaTeX
-\LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math
-. I can also give equations their own space:
-\begin{equation} % Creates an equation environment and is compiled as math
-    \langle a_{x} b_{y} \rangle =  \sum_{ab} ab \langle a_{x} b_{y} |\Pi_{a}^{\pm}(\theta_{a})\otimes \Pi_{b}^{\pm}(\theta_{b})|a_{x} b_{y} \rangle
-\end{equation}
-If I do not leave any blank lines \LaTeX{} will continue  this text without making it into a new paragraph.  Notice how there was no indentation in the text after equation (1).
-Also notice how even though I hit enter after that sentence and here $\downarrow$
-\LaTeX{} formats the sentence without any break.  Also   look  how      it   doesn't     matter          how    many  spaces     I put     between       my    words.
+\section{Problem 3.1} 
 
-For a new paragraph I can leave a blank space in my code.
+Problem 3.1 presents our beloved scientists, Alice and Bob, measuring the angular momentum of classical particles. They set up a micro explosion that sends two particles to opposite sides of the lab, Alice recieves a fragment with angular momentum $J$, while Bob recieves another fragment with angular momentum $-J$. 
+
+For each fragment, Alice will chose a direction $\alpha_{i}$ along which to measure her fragment. Bob will do the same, choosing an direction $\beta_{j}$. The final measurents for each measurement will be $\text{sign}[\alpha_{i} \cdot J]$ and $-\text{sign}[\beta_{j} \cdot J]$  respectively. For the first part of this problem, we calculate the CHSH correlator for the classical case of Alice and Bob's micro-exposion experiment. 
+
+For the second part of this problem, we assume that Alice and Bob are measuring a singlet state of spin-1/2 particles. We 
 
 \end{document} % This is the end of the document
